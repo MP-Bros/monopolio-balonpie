@@ -67,6 +67,11 @@ td {
 	border-spacing: 3px;
 	margin: 25px;
 	float: left;
+	background: url("images/misc/fondotablero.jpg");
+	background-size: contain; 
+	background-size: 690px;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 #jail {
@@ -437,7 +442,7 @@ td {
 	display: none;
 	position: fixed;
 	border: 2px solid black;
-	width: 235px;
+	width: 470px;
 	height: 275px;
 	background-color: white;
 	z-index: 18;
@@ -832,9 +837,16 @@ td {
 /* A partir de aquí están nuestro cambios! */
 /*******************************************/
 
+#deed-normal {
+	display: flex;
+	width: 470px;
+}
+
 #deed-image {
-	width: 400px;
-	height: 400px;
+	background-size: contain;
+	background-repeat: no-repeat !important;
+	width: 235px;
+	height: 275px;
 }
 
 /* Esquinas */

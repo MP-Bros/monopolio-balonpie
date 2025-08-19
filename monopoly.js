@@ -2182,6 +2182,7 @@ function showdeed(property) {
 
 		if (sq.groupNumber >= 3) {
 			$("#deed-normal").show();
+			document.getElementById("deed-image").style.background = 'url("images/cells/cell' + property + '.jpg")';
 			document.getElementById("deed-header").style.backgroundColor = sq.color;
 			document.getElementById("deed-name").textContent = sq.name;
 			document.getElementById("deed-baserent").textContent = sq.baserent;
