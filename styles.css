@@ -83,8 +83,8 @@ td {
 #control {
 	position: absolute;
 	z-index: 9;
-	top: 250px;
-	left: 250px;
+	top: 25px;
+	left: 1000px;
 	border: 2px solid black;
 	padding: 10px;
 	display: none;
@@ -117,7 +117,7 @@ td {
 
 #alert {
 	width: 307px;
-	height: 92px;
+	height: 30vh;
 	margin: 0px;
 	padding-left: 1px;
 	border: 1px solid gray;
@@ -576,7 +576,7 @@ td {
 	padding: 0px;
 	vertical-align: bottom;
 	background-repeat: no-repeat;
-	background-size: auto 40px;
+	background-size: contain;
 }
 
 .board-center {
@@ -616,17 +616,20 @@ td {
 	width: 150px;
 	height: 200px;
 	display: none;
-	background-color: white;
+	/* background-color: white;*/
 	border: 2px solid black;
 	text-align: center;
 	font-size: 12px;
 	font-family: arial, sans-serif;
 	position: fixed;
 	z-index: 15;
+	background-size: contain;
+	background-repeat: no-repeat;
+  	background-position: bottom;
 }
 
 .enlarge-color {
-	background: white;
+	background: transparent;
 	width: 100%;
 	height: 40px;
 }
@@ -634,12 +637,12 @@ td {
 .enlarge-name {
 	font-weight: bold;
 	font-size: 20px;
-	background-color: white;
+	background-color: transparent;
 	height: 45px;
 }
 
 .enlarge-price {
-	background-color: white;
+	background-color: transparent;
 	vertical-align: bottom;
 	height: 25px;
 }
@@ -822,4 +825,53 @@ td {
 	top: 0px;
 	width: 15px;
 
+}
+
+
+/*******************************************************************************/
+/* Hola, esto es un comentario! A partir de aquí está lo que añadimos nosotros */
+/*******************************************************************************/
+
+/* He estado haciendo pruebas, no te preocupes ahora por lo de los nombres,
+	los puedes poner tu en las fotos, o podemos ponerles un pequeño estilo 
+	para que se vean bien. Lo importante ahora es que encajen las fotos. */
+
+/* Necesitamos dos tipos de imágenes, unas para la casilla y otras para la ficha. */
+
+/*	Para las casillas verticales (las de arriba y abajo) se puede usar la misma,
+	Por que ambas tienen una resolución igual, solo que la ficha es un pelín más grande.
+	Por ejemplo: */
+#cell1 {
+	background-image: url("https://picsum.photos/id/1/72/102");
+}
+
+#enlarge1 {
+	background-image: url("https://picsum.photos/id/1/72/102");
+}
+
+/*	Para las casillas horizontales (las de los laterales) ay que hace 2 verisones,
+	Con resoluciones opuestas, una apaisanada y otra no
+	Por ejemplo: */
+#cell39 {
+	background-image: url("https://picsum.photos/id/11/102/72");
+}
+
+#enlarge39 {
+	background-image: url("https://picsum.photos/id/11/72/102");
+}
+
+/*	Para las casillas e las esquinas, en vez de dos fotos podemos cambiar el tamaño
+    de la tarjeta (haciendola más bajita) para que quede cuadrada
+	Por ejemplo: */
+#cell20 {
+	background-image: url("images/cells/cell20.png");
+}
+
+#enlarge20 {
+	background-image: url("images/cells/cell20.png");
+	height: 150px;
+
+	.enlarge-color {
+		background: transparent !important;
+	}
 }
