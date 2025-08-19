@@ -828,50 +828,321 @@ td {
 }
 
 
-/*******************************************************************************/
-/* Hola, esto es un comentario! A partir de aquí está lo que añadimos nosotros */
-/*******************************************************************************/
+/*******************************************/
+/* A partir de aquí están nuestro cambios! */
+/*******************************************/
 
-/* He estado haciendo pruebas, no te preocupes ahora por lo de los nombres,
-	los puedes poner tu en las fotos, o podemos ponerles un pequeño estilo 
-	para que se vean bien. Lo importante ahora es que encajen las fotos. */
-
-/* Necesitamos dos tipos de imágenes, unas para la casilla y otras para la ficha. */
-
-/*	Para las casillas verticales (las de arriba y abajo) se puede usar la misma,
-	Por que ambas tienen una resolución igual, solo que la ficha es un pelín más grande.
-	Por ejemplo: */
-#cell1 {
-	background-image: url("https://picsum.photos/id/1/72/102");
+#deed-image {
+	width: 400px;
+	height: 400px;
 }
 
-#enlarge1 {
-	background-image: url("https://picsum.photos/id/1/72/102");
+/* Esquinas */
+#cell0 {
+	background-image: url("images/cells/cell0.jpg");
 }
-
-/*	Para las casillas horizontales (las de los laterales) ay que hace 2 verisones,
-	Con resoluciones opuestas, una apaisanada y otra no
-	Por ejemplo: */
-#cell39 {
-	background-image: url("https://picsum.photos/id/11/102/72");
-}
-
-#enlarge39 {
-	background-image: url("https://picsum.photos/id/11/72/102");
-}
-
-/*	Para las casillas e las esquinas, en vez de dos fotos podemos cambiar el tamaño
-    de la tarjeta (haciendola más bajita) para que quede cuadrada
-	Por ejemplo: */
-#cell20 {
-	background-image: url("images/cells/cell20.png");
-}
-
-#enlarge20 {
-	background-image: url("images/cells/cell20.png");
+#enlarge0 {
+	background-image: url("images/cells/cell0.jpg");
 	height: 150px;
 
 	.enlarge-color {
 		background: transparent !important;
 	}
 }
+
+#cell10 {
+	background-image: url("images/cells/cell10.jpg");
+}
+#enlarge10 {
+	background-image: url("images/cells/cell10.jpg");
+	height: 150px;
+
+	.enlarge-color {
+		background: transparent !important;
+	}
+}
+
+#cell20 {
+	background-image: url("images/cells/cell20.jpg");
+}
+#enlarge20 {
+	background-image: url("images/cells/cell20.jpg");
+	height: 150px;
+
+	.enlarge-color {
+		background: transparent !important;
+	}
+}
+
+#cell30 {
+	background-image: url("images/cells/cell30.jpg");
+}
+#enlarge30 {
+	background-image: url("images/cells/cell30.jpg");
+	height: 150px;
+
+	.enlarge-color {
+		background: transparent !important;
+	}
+}
+
+
+/* Abajo */
+#cell1 {
+	background-image: url("images/cells/cell1.jpg");
+}
+#enlarge1 {
+	background-image: url("images/cells/cell1.jpg");
+}
+
+#cell2 {
+	background-image: url("images/cells/cell2.jpg");
+}
+#enlarge2 {
+	background-image: url("images/cells/cell2.jpg");
+}
+
+#cell3 {
+	background-image: url("images/cells/cell3.jpg");
+}
+#enlarge3 {
+	background-image: url("images/cells/cell3.jpg");
+}
+
+#cell4 {
+	background-image: url("images/cells/cell4.jpg");
+}
+#enlarge4 {
+	background-image: url("images/cells/cell4.jpg");
+}
+
+#cell5 {
+	background-image: url("images/cells/cell5.jpg");
+}
+#enlarge5 {
+	background-image: url("images/cells/cell5.jpg");
+}
+
+#cell6 {
+	background-image: url("images/cells/cell6.jpg");
+}
+#enlarge6 {
+	background-image: url("images/cells/cell6.jpg");
+}
+
+#cell7 {
+	background-image: url("images/cells/suerteVcell7y22.jpg");
+}
+#enlarge7 {
+	background-image: url("images/cells/suerteVcell7y22.jpg");
+}
+
+#cell8 {
+	background-image: url("images/cells/cell8.jpg");
+}
+#enlarge8 {
+	background-image: url("images/cells/cell8.jpg");
+}
+
+#cell9 {
+	background-image: url("images/cells/cell9.jpg");
+}
+#enlarge9 {
+	background-image: url("images/cells/cell9.jpg");
+}
+
+
+/* Izquierda */
+#cell11 {
+	background-image: url("images/cells/cell11.jpg");
+}
+#enlarge11 {
+	background-image: url("images/cells/cell11.jpg");
+}
+
+#cell12 {
+	background-image: url("images/cells/cell12.jpg");
+}
+#enlarge12 {
+	background-image: url("images/cells/cell12.jpg");
+}
+
+#cell13 {
+	background-image: url("images/cells/cell13.jpg");
+}
+#enlarge13 {
+	background-image: url("images/cells/cell13.jpg");
+}
+
+#cell14 {
+	background-image: url("images/cells/cell14.jpg");
+}
+#enlarge14 {
+	background-image: url("images/cells/cell14.jpg");
+}
+
+#cell15 {
+	background-image: url("images/cells/cell15.jpg");
+}
+#enlarge15 {
+	background-image: url("images/cells/cell15.jpg");
+}
+
+#cell16 {
+	background-image: url("images/cells/cell16.jpg");
+}
+#enlarge16 {
+	background-image: url("images/cells/cell16.jpg");
+}
+
+#cell17 {
+	background-image: url("images/cells/cell17.jpg");
+}
+#enlarge17 {
+	background-image: url("images/cells/cell17.jpg");
+}
+
+#cell18 {
+	background-image: url("images/cells/cell18.jpg");
+}
+#enlarge18 {
+	background-image: url("images/cells/cell18.jpg");
+}
+
+#cell19 {
+	background-image: url("images/cells/cell19.jpg");
+}
+#enlarge19 {
+	background-image: url("images/cells/cell19.jpg");
+}
+
+
+/* Arriba */
+#cell21 {
+	background-image: url("images/cells/cell21.jpg");
+}
+#enlarge21 {
+	background-image: url("images/cells/cell21.jpg");
+}
+
+#cell22 {
+	background-image: url("images/cells/suerteVcell7y22.jpg");
+}
+#enlarge22 {
+	background-image: url("images/cells/suerteVcell7y22.jpg");
+}
+
+#cell23 {
+	background-image: url("images/cells/cell23.jpg");
+}
+#enlarge23 {
+	background-image: url("images/cells/cell23.jpg");
+}
+
+#cell24 {
+	background-image: url("images/cells/cell24.jpg");
+}
+#enlarge24 {
+	background-image: url("images/cells/cell24.jpg");
+}
+
+#cell25 {
+	background-image: url("images/cells/cell25.jpg");
+}
+#enlarge25 {
+	background-image: url("images/cells/cell25.jpg");
+}
+
+#cell26 {
+	background-image: url("images/cells/cell26.jpg");
+}
+#enlarge26 {
+	background-image: url("images/cells/cell26.jpg");
+}
+
+#cell27 {
+	background-image: url("images/cells/cell27.jpg");
+}
+#enlarge27 {
+	background-image: url("images/cells/cell27.jpg");
+}
+
+#cell28 {
+	background-image: url("images/cells/cell28.jpg");
+}
+#enlarge28 {
+	background-image: url("images/cells/cell28.jpg");
+}
+
+#cell29 {
+	background-image: url("images/cells/cell29.jpg");
+}
+#enlarge29 {
+	background-image: url("images/cells/cell29.jpg");
+}
+
+
+/* Arriba */
+#cell31 {
+	background-image: url("images/cells/cell31.jpg");
+}
+#enlarge31 {
+	background-image: url("images/cells/cell31.jpg");
+}
+
+#cell32 {
+	background-image: url("images/cells/cell32.jpg");
+}
+#enlarge32 {
+	background-image: url("images/cells/cell32.jpg");
+}
+
+#cell33 {
+	background-image: url("images/cells/cell33.jpg");
+}
+#enlarge33 {
+	background-image: url("images/cells/cell33.jpg");
+}
+
+#cell34 {
+	background-image: url("images/cells/cell34.jpg");
+}
+#enlarge34 {
+	background-image: url("images/cells/cell34.jpg");
+}
+
+#cell35 {
+	background-image: url("images/cells/cell35.jpg");
+}
+#enlarge35 {
+	background-image: url("images/cells/cell35.jpg");
+}
+
+#cell36 {
+	background-image: url("images/cells/suerteHcell36.jpg");
+}
+#enlarge36 {
+	background-image: url("images/cells/suerteVcell7y22.jpg");
+}
+
+#cell37 {
+	background-image: url("images/cells/cell37.jpg");
+}
+#enlarge37 {
+	background-image: url("images/cells/cell37.jpg");
+}
+
+#cell38 {
+	background-image: url("images/cells/cell38.jpg");
+}
+#enlarge38 {
+	background-image: url("images/cells/cell38.jpg");
+}
+
+#cell39 {
+	background-image: url("images/cells/cell39.jpg");
+}
+#enlarge39 {
+	background-image: url("images/cells/cell39.jpg");
+}
+
