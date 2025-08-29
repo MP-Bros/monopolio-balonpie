@@ -1298,8 +1298,8 @@ function updatePosition() {
 		for (var y = turn; y <= pcount; y++) {
 
 			if (player[y].position == x && !player[y].jail) {
-
-				document.getElementById("cell" + x + "positionholder").innerHTML += "<div class='cell-position' title='" + player[y].name + "' style='background-color: " + player[y].color + "; left: " + left + "px; top: " + top + "px;'></div>";
+				// TODO: actualiza posición de los jugadores (pone los bloques de colores)
+				document.getElementById("cell" + x + "positionholder").innerHTML += "<div class='cell-position' title='" + player[y].name + "' style='background-color: " + player[y].color + "; left: " + left + "px; top: " + top + "px; background-image: url(" + player[y].escudo  + ")'></div>";
 				if (left == 36) {
 					left = 0;
 					top = 12;
@@ -1311,7 +1311,7 @@ function updatePosition() {
 		for (var y = 1; y < turn; y++) {
 
 			if (player[y].position == x && !player[y].jail) {
-				document.getElementById("cell" + x + "positionholder").innerHTML += "<div class='cell-position' title='" + player[y].name + "' style='background-color: " + player[y].color + "; left: " + left + "px; top: " + top + "px;'></div>";
+				document.getElementById("cell" + x + "positionholder").innerHTML += "<div class='cell-position' title='" + player[y].name + "' style='background-color: " + player[y].color + "; left: " + left + "px; top: " + top + "px; background-image: url(" + player[y].escudo  + ")'></div>";
 				if (left == 36) {
 					left = 0;
 					top = 12;
@@ -1325,7 +1325,7 @@ function updatePosition() {
 	top = 53;
 	for (var i = turn; i <= pcount; i++) {
 		if (player[i].jail) {
-			document.getElementById("jailpositionholder").innerHTML += "<div class='cell-position' title='" + player[i].name + "' style='background-color: " + player[i].color + "; left: " + left + "px; top: " + top + "px;'></div>";
+			document.getElementById("jailpositionholder").innerHTML += "<div class='cell-position' title='" + player[i].name + "' style='background-color: " + player[i].color + "; left: " + left + "px; top: " + top + "px; background-image: url(" + player[y].escudo  + ")'></div>";
 
 			if (left === 36) {
 				left = 0;
@@ -1338,7 +1338,7 @@ function updatePosition() {
 
 	for (var i = 1; i < turn; i++) {
 		if (player[i].jail) {
-			document.getElementById("jailpositionholder").innerHTML += "<div class='cell-position' title='" + player[i].name + "' style='background-color: " + player[i].color + "; left: " + left + "px; top: " + top + "px;'></div>";
+			document.getElementById("jailpositionholder").innerHTML += "<div class='cell-position' title='" + player[i].name + "' style='background-color: " + player[i].color + "; left: " + left + "px; top: " + top + "px; background-image: url(" + player[y].escudo  + ")'></div>";
 			if (left === 36) {
 				left = 0;
 				top = 41;
@@ -1370,7 +1370,7 @@ function updateMoney() {
 		p_i = player[i];
 
 		$("#moneybarrow" + i).show();
-		document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color;
+		document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color; // TODO: color barra dinero
 		document.getElementById("p" + i + "money").innerHTML = p_i.money;
 		document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
 	}
@@ -2619,6 +2619,35 @@ function setup() {
 	for (var i = 1; i <= pcount; i++) {
 		p = player[playerArray[i - 1]];
 
+		p.equipo = document.getElementById("player" + i + "color").options[document.getElementById("player" + i + "color").selectedIndex].text;
+		console.log(p.equipo);
+		
+		switch(p.equipo) {
+			case 'Brain':
+				p.escudo = "images/escudos/escudo_brain.png";
+				break;
+			case 'Raimon':
+				p.escudo = "images/escudos/escudo_inazuma.png";
+				break;
+			case 'Kirkwood':
+				p.escudo = "images/escudos/escudo_kirkwood.png";
+				break;
+			case 'Occult':
+				p.escudo = "images/escudos/escudo_occult.png";
+				break;
+			case 'Ogro':
+				p.escudo = "images/escudos/escudo_ogro.png";
+				break;
+			case 'Royal Academy':
+				p.escudo = "images/escudos/escudo_royal.png";
+				break;
+			case 'Wild':
+				p.escudo = "images/escudos/escudo_wild.png";
+				break;
+			case 'Zeus':
+				p.escudo = "images/escudos/escudo_zeus.png";
+				break;
+		}
 
 		p.color = document.getElementById("player" + i + "color").value.toLowerCase();
 
