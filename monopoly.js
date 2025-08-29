@@ -2799,9 +2799,9 @@ window.onload = function() {
 	var HTML = "";
 	for (var i = 0; i < 40; i++) {
 		HTML += "<div id='enlarge" + i + "' class='enlarge'>";
-		HTML += "<div id='enlarge" + i + "color' class='enlarge-color'></div><br /><div id='enlarge" + i + "name' class='enlarge-name'></div>";
-		HTML += "<br /><div id='enlarge" + i + "price' class='enlarge-price'></div>";
-		HTML += "<br /><div id='enlarge" + i + "token' class='enlarge-token'></div></div>";
+		HTML += "<div id='enlarge" + i + "color' class='enlarge-color'></div><div id='enlarge" + i + "name' class='enlarge-name'></div>";
+		HTML += "<div id='enlarge" + i + "price' class='enlarge-price'></div>";
+		HTML += "<div id='enlarge" + i + "token' class='enlarge-token'></div></div>";
 	}
 
 	enlargeWrap.innerHTML = HTML;
