@@ -65,7 +65,7 @@ function citytax() {
 
 var square = [];
 
-square[0] = new Square("COBRAS $200 POR GANAR EL PARTIDO.", "#FFFFFF");
+square[0] = new Square("", "COBRAS $200 POR GANAR EL PARTIDO.", "#FFFFFF");
 square[1] = new Square("Feldt", "$60", "#8B4513", 60, 3, 2, 10, 30, 90, 160, 250);
 square[2] = new Square("NOTICIAS", "","transparent");
 square[3] = new Square("Turner", "$60", "#8B4513", 60, 3, 4, 20, 60, 180, 320, 450);
