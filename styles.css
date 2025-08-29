@@ -931,11 +931,10 @@ td {
 	}
 
 	.enlarge-name {
-		height: 45px;
 	}
 
 	.enlarge-price {
-		display: none;
+		height: 50px;
 	}
 }
 
