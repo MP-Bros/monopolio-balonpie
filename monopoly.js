@@ -2012,7 +2012,7 @@ function useJailCard() {
 		}
 	}
 
-	addAlert(p.name + " usó una carta \"Sales del banquillo\".");
+	addAlert(p.name + " usó una carta \"Get Out of Jail Free\".");
 	updateOwned();
 	updatePosition();
 }
