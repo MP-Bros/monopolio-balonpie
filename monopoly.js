@@ -1298,7 +1298,6 @@ function updatePosition() {
 		for (var y = turn; y <= pcount; y++) {
 
 			if (player[y].position == x && !player[y].jail) {
-				// TODO: actualiza posición de los jugadores (pone los bloques de colores)
 				document.getElementById("cell" + x + "positionholder").innerHTML += "<div class='cell-position' title='" + player[y].name + "' style='background-color: " + player[y].color + "; left: " + left + "px; top: " + top + "px; background-image: url(" + player[y].escudo  + ")'></div>";
 				if (left == 36) {
 					left = 0;
@@ -1370,7 +1369,7 @@ function updateMoney() {
 		p_i = player[i];
 
 		$("#moneybarrow" + i).show();
-		document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color; // TODO: color barra dinero
+		document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color;
 		document.getElementById("p" + i + "money").innerHTML = p_i.money;
 		document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
 		document.getElementById("p" + i + "moneyescudo").src = p_i.escudo;
