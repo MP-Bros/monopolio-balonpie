@@ -916,6 +916,24 @@ td {
 	}
 }
 
+#enlarge40 {
+	background-image: url("images/cells/cell10.jpg");
+	background-size: auto 150px;
+
+	.enlarge-color {
+		display: none;
+	}
+
+	.enlarge-name {
+		height: 45px;
+	}
+
+	.enlarge-price {
+		display: none;
+	}
+}
+
+
 #cell20 {
 	background-image: url("images/cells/cell20.jpg");
 }
@@ -1305,4 +1323,3 @@ td {
 #enlarge39 {
 	background-image: url("images/cells/cell39.jpg");
 }
-
