@@ -1789,7 +1789,7 @@ function addamount(amount, cause) {
 
 	p.money += amount;
 
-	addAlert(p.name + " received $" + amount + " from " + cause + ".");
+	addAlert(p.name + " recibe $" + amount + " de " + cause + ".");
 }
 
 function subtractamount(amount, cause) {
@@ -1797,19 +1797,19 @@ function subtractamount(amount, cause) {
 
 	p.pay(amount, 0);
 
-	addAlert(p.name + " lost $" + amount + " from " + cause + ".");
+	addAlert(p.name + " pierde $" + amount + " por culpa de " + cause + ".");
 }
 
 function gotojail() {
 	var p = player[turn];
-	addAlert(p.name + " was sent directly to jail.");
-	document.getElementById("landed").innerHTML = "You are in jail.";
+	addAlert(p.name + " se va al banquillo directo.");
+	document.getElementById("landed").innerHTML = "Estás en el banquillo.";
 
 	p.jail = true;
 	doublecount = 0;
 
-	document.getElementById("nextbutton").value = "End turn";
-	document.getElementById("nextbutton").title = "End turn and advance to the next player.";
+	document.getElementById("nextbutton").value = "Acabar turno";
+	document.getElementById("nextbutton").title = "Acaba tu turno y pasa el turno al siguiente jugador.";
 
 	if (p.human) {
 		document.getElementById("nextbutton").focus();
@@ -1846,7 +1846,7 @@ function payeachplayer(amount, cause) {
 		}
 	}
 
-	addAlert(p.name + " lost $" + total + " from " + cause + ".");
+	addAlert(p.name + " pierde $" + total + " por culpa de " + cause + ".");
 }
 
 function collectfromeachplayer(amount, cause) {
@@ -1868,7 +1868,7 @@ function collectfromeachplayer(amount, cause) {
 		}
 	}
 
-	addAlert(p.name + " received $" + total + " from " + cause + ".");
+	addAlert(p.name + " recibe $" + total + " de " + cause + ".");
 }
 
 function advance(destination, pass) {
@@ -1880,7 +1880,7 @@ function advance(destination, pass) {
 		} else {
 			p.position = pass;
 			p.money += 200;
-			addAlert(p.name + " collected a $200 salary for passing GO.");
+			addAlert(p.name + " recibe $200 al ganar un partido.");
 		}
 	}
 	if (p.position < destination) {
@@ -1888,7 +1888,7 @@ function advance(destination, pass) {
 	} else {
 		p.position = destination;
 		p.money += 200;
-		addAlert(p.name + " collected a $200 salary for passing GO.");
+		addAlert(p.name + " recibe $200 al ganar un partido.");
 	}
 
 	land();
@@ -1904,7 +1904,7 @@ function advanceToNearestUtility() {
 	} else if (p.position >= 28) {
 		p.position = 12;
 		p.money += 200;
-		addAlert(p.name + " collected a $200 salary for passing GO.");
+		addAlert(p.name + " recibe $200 al ganar un partido.");
 	}
 
 	land(true);
@@ -1922,7 +1922,7 @@ function advanceToNearestRailroad() {
 	} else if (p.position >= 35) {
 		p.position = 5;
 		p.money += 200;
-		addAlert(p.name + " collected a $200 salary for passing GO.");
+		addAlert(p.name + " recibe $200 al ganar un partido.");
 	}
 
 	land(true);
@@ -1947,9 +1947,9 @@ function streetrepairs(houseprice, hotelprice) {
 
 		// If function was called by Community Chest.
 		if (houseprice === 40) {
-			addAlert(p.name + " lost $" + cost + " to Community Chest.");
+			addAlert(p.name + " pierde $" + cost + " debido a NOTICIAS.");
 		} else {
-			addAlert(p.name + " lost $" + cost + " to Chance.");
+			addAlert(p.name + " pierde $" + cost + " debido a SUERTE.");
 		}
 	}
 
@@ -1969,7 +1969,7 @@ function payfifty() {
 	p.position = 10;
 	p.pay(50, 0);
 
-	addAlert(p.name + " paid the $50 fine to get out of jail.");
+	addAlert(p.name + " paga $50 para salir del banquillo.");
 	updateMoney();
 	updatePosition();
 }
@@ -2012,7 +2012,7 @@ function useJailCard() {
 		}
 	}
 
-	addAlert(p.name + " used a \"Get Out of Jail Free\" card.");
+	addAlert(p.name + " usó una carta \"Sales del banquillo\".");
 	updateOwned();
 	updatePosition();
 }
