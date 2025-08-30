@@ -2426,8 +2426,8 @@ function roll() {
 	if (p.human) {
 		document.getElementById("nextbutton").focus();
 	}
-	document.getElementById("nextbutton").value = "End turn";
-	document.getElementById("nextbutton").title = "End turn and advance to the next player.";
+	document.getElementById("nextbutton").value = "Acabar turno";
+	document.getElementById("nextbutton").title = "Acaba tu turno y pasa el turno al siguiente jugador.";
 
 	game.rollDice();
 	var die1 = game.getDie(1);
@@ -2436,28 +2436,28 @@ function roll() {
 	doublecount++;
 
 	if (die1 == die2) {
-		addAlert(p.name + " rolled " + (die1 + die2) + " - doubles.");
+		addAlert(p.name + " sacó " + (die1 + die2) + " - ¡Dobles!.");
 	} else {
-		addAlert(p.name + " rolled " + (die1 + die2) + ".");
+		addAlert(p.name + " sacó " + (die1 + die2) + ".");
 	}
 
 	if (die1 == die2 && !p.jail) {
 		updateDice(die1, die2);
 
 		if (doublecount < 3) {
-			document.getElementById("nextbutton").value = "Roll again";
-			document.getElementById("nextbutton").title = "You threw doubles. Roll again.";
+			document.getElementById("nextbutton").value = "Tira de nuevo";
+			document.getElementById("nextbutton").title = "¡Sacaste dobles!. Tira de nuevo.";
 
 		// If player rolls doubles three times in a row, send him to jail
 		} else if (doublecount === 3) {
 			p.jail = true;
 			doublecount = 0;
-			addAlert(p.name + " rolled doubles three times in a row.");
+			addAlert("Oups, " + p.name + " sacó dobles tres veces seguidas.");
 			updateMoney();
 
 
 			if (p.human) {
-				popup("You rolled doubles three times in a row. Go to jail.", gotojail);
+				popup("Sacaste dobles tres veces seguidas. ¡Al banquillo!.", gotojail);
 			} else {
 				gotojail();
 			}
@@ -2465,8 +2465,8 @@ function roll() {
 			return;
 		}
 	} else {
-		document.getElementById("nextbutton").value = "End turn";
-		document.getElementById("nextbutton").title = "End turn and advance to the next player.";
+		document.getElementById("nextbutton").value = "Acabar turno";
+		document.getElementById("nextbutton").title = "Acaba tu turno y pasa el turno al siguiente jugador.";
 		doublecount = 0;
 	}
 
@@ -2488,14 +2488,14 @@ function roll() {
 			p.position = 10 + die1 + die2;
 			doublecount = 0;
 
-			addAlert(p.name + " rolled doubles to get out of jail.");
+			addAlert(p.name + " sacó dobles para salir del banquillo.");
 
 			land();
 		} else {
 			if (p.jailroll === 3) {
 
 				if (p.human) {
-					popup("<p>You must pay the $50 fine.</p>", function() {
+					popup("<p>Debes pagar la multa de $50.</p>", function() {
 						payfifty();
 						player[turn].position=10 + die1 + die2;
 						land();
@@ -2507,7 +2507,7 @@ function roll() {
 				}
 			} else {
 				$("#landed").show();
-				document.getElementById("landed").innerHTML = "You are in jail.";
+				document.getElementById("landed").innerHTML = "Estás en el banquillo.";
 
 				if (!p.human) {
 					popup(p.AI.alertList, game.next);
@@ -2527,7 +2527,7 @@ function roll() {
 		if (p.position >= 40) {
 			p.position -= 40;
 			p.money += 200;
-			addAlert(p.name + " collected a $200 salary for passing GO.");
+			addAlert(p.name + " cobras $200 por ganar un partido.");
 		}
 
 		land();
@@ -2550,7 +2550,7 @@ function play() {
 	document.getElementById("pname").innerHTML = p.name;
 	document.getElementById("pescudo").src = p.escudo;
 
-	addAlert("It is " + p.name + "'s turn.");
+	addAlert("Es el tunro de " + p.name + ".");
 
 	// Check for bankruptcy.
 	p.pay(0, p.creditor);
@@ -2562,29 +2562,30 @@ function play() {
 	if (p.human) {
 		document.getElementById("nextbutton").focus();
 	}
-	document.getElementById("nextbutton").value = "Roll Dice";
-	document.getElementById("nextbutton").title = "Roll the dice and move your token accordingly.";
+	document.getElementById("nextbutton").value = "Tirar los dados";
+	document.getElementById("nextbutton").title = "Lanza los dados y mueve tu ficha los espacios correspondientes.";
 
 	$("#die0").hide();
 	$("#die1").hide();
 
 	if (p.jail) {
 		$("#landed").show();
-		document.getElementById("landed").innerHTML = "You are in jail.<input type='button' title='Pay $50 fine to get out of jail immediately.' value='Pay $50 fine' onclick='payfifty();' />";
+		document.getElementById("landed").innerHTML = "Estás en el banquillo.<input type='button' title='Soborna con $50 al árbitro para salir al momento del banquillo.' value='Pay $50 fine' onclick='payfifty();' />";
 
 		if (p.communityChestJailCard || p.chanceJailCard) {
-			document.getElementById("landed").innerHTML += "<input type='button' id='gojfbutton' title='Use &quot;Get Out of Jail Free&quot; card.' onclick='useJailCard();' value='Use Card' />";
+			document.getElementById("landed").innerHTML += "<input type='button' id='gojfbutton' title='Usar la carta &quot;Sales del banquillo&quot;.' onclick='useJailCard();' value='Use Card' />";
 		}
 
 		document.getElementById("nextbutton").title = "Roll the dice. If you throw doubles, you will get out of jail.";
+		document.getElementById("nextbutton").title = "Tira los dados. Si sacas dobles, sales del banquillo a jugar.";
 
 		if (p.jailroll === 0)
-			addAlert("This is " + p.name + "'s first turn in jail.");
+			addAlert("Este es el primer turno de " + p.name + "en el banquillo.");
 		else if (p.jailroll === 1)
-			addAlert("This is " + p.name + "'s second turn in jail.");
+			addAlert("Este es el segundo turno de " + p.name + "en el banquillo.");
 		else if (p.jailroll === 2) {
-			document.getElementById("landed").innerHTML += "<div>NOTE: If you do not throw doubles after this roll, you <i>must</i> pay the $50 fine.</div>";
-			addAlert("This is " + p.name + "'s third turn in jail.");
+			document.getElementById("landed").innerHTML += "<div>NOTA: Si no sacas dobles ahora, <i>debes</i> pagar el soborno de $50.</div>";
+			addAlert("Este es el tercer turno de " + p.name + "en el banquillo.");
 		}
 
 		if (!p.human && p.AI.postBail()) {
@@ -2859,9 +2860,9 @@ window.onload = function() {
 
 	document.getElementById("jail").enlargeId = "enlarge40";
 
-	document.getElementById("enlarge-wrap").innerHTML += "<div id='enlarge40' class='enlarge'><div id='enlarge40color' class='enlarge-color'></div><br /><div id='enlarge40name' class='enlarge-name'>Jail</div><br /><div id='enlarge40price' class='enlarge-price'><img src='images/jake_icon.png' height='80' width='80' alt='' style='position: relative; top: -20px;' /></div><br /><div id='enlarge40token' class='enlarge-token'></div></div>";
+	document.getElementById("enlarge-wrap").innerHTML += "<div id='enlarge40' class='enlarge'><div id='enlarge40color' class='enlarge-color'></div><br /><div id='enlarge40name' class='enlarge-name'>Banquillo</div><br /><div id='enlarge40price' class='enlarge-price'><img src='images/jake_icon.png' height='80' width='80' alt='' style='position: relative; top: -20px;' /></div><br /><div id='enlarge40token' class='enlarge-token'></div></div>";
 
-	document.getElementById("enlarge40name").innerHTML = "Jail";
+	document.getElementById("enlarge40name").innerHTML = "Banquillo";
 
 	// Create event handlers for hovering and draging.
 
