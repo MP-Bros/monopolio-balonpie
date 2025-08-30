@@ -1373,6 +1373,7 @@ function updateMoney() {
 		document.getElementById("p" + i + "moneybar").style.border = "2px solid " + p_i.color; // TODO: color barra dinero
 		document.getElementById("p" + i + "money").innerHTML = p_i.money;
 		document.getElementById("p" + i + "moneyname").innerHTML = p_i.name;
+		document.getElementById("p" + i + "moneyescudo").src = p_i.escudo;
 	}
 
 	if (document.getElementById("landed").innerHTML === "") {
@@ -2547,6 +2548,7 @@ function play() {
 	game.resetDice();
 
 	document.getElementById("pname").innerHTML = p.name;
+	document.getElementById("pescudo").src = p.escudo;
 
 	addAlert("It is " + p.name + "'s turn.");
 
