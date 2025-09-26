@@ -1715,7 +1715,8 @@ function chanceCommunityChest() {
 			communityChestCards.deck.splice(communityChestCards.index, 1);
 		}
 
-		popup("<img src='images/iconos/noticias.png' style='height: 50px; width: 53px; float: left; margin: 8px 8px 8px 0px; background-color: #23516f;' /><div style='font-weight: bold; font-size: 16px; '>Última hora:</div><div style='text-align: justify;'>" + communityChestCards[communityChestIndex].text + "</div>", function() {
+		//  background-color: #23516f;
+		popup("<img src='images/iconos/noticias.png' style='height: 50px; width: 53px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Última hora:</div><div style='text-align: justify;'>" + communityChestCards[communityChestIndex].text + "</div>", function() {
 			communityChestAction(communityChestIndex);
 		});
 
@@ -1734,7 +1735,8 @@ function chanceCommunityChest() {
 			chanceCards.deck.splice(chanceCards.index, 1);
 		}
 
-		popup("<img src='images/iconos/suerte.png' style='height: 50px; width: 26px; float: left; margin: 8px 8px 8px 0px; background-color: #be80bd;' /><div style='font-weight: bold; font-size: 16px; '>Suerte:</div><div style='text-align: justify;'>" + chanceCards[chanceIndex].text + "</div>", function() {
+		// background-color: #be80bd;
+		popup("<img src='images/iconos/suerte.png' style='height: 50px; width: 50px; float: left; margin: 8px 8px 8px 0px;' /><div style='font-weight: bold; font-size: 16px; '>Suerte:</div><div style='text-align: justify;'>" + chanceCards[chanceIndex].text + "</div>", function() {
 			chanceAction(chanceIndex);
 		});
 
