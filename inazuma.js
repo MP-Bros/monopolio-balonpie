@@ -42,25 +42,25 @@ function corrections() {
 }
 
 function utiltext() {
-	return '&nbsp;&nbsp;&nbsp;&nbsp;If one "Utility" is owned rent is 4 times amount shown on dice.<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;If both "Utilitys" are owned rent is 10 times amount shown on dice.';
+	return '&nbsp;&nbsp;&nbsp;&nbsp;Si posees una "Utilidad" (transporte o equipamiento) el alquiler es 4 veces el valor de los dados.<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;Si posees ambas, el alquiler es 10 veces el valor de los dados.';
 }
 
 function transtext() {
-	return '<div style="font-size: 14px; line-height: 1.5;">Rent<span style="float: right;">$25.</span><br />If 2 Railroads are owned<span style="float: right;">50.</span><br />If 3 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">100.</span><br />If 4 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">200.</span></div>';
+	return '<div style="font-size: 14px; line-height: 1.5;">Alquiler<span style="float: right;">$25.</span><br />Con 2 estadios<span style="float: right;">50.</span><br />con 3 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">100.</span><br />Con 4 &nbsp; &nbsp; " &nbsp; &nbsp; " &nbsp; &nbsp; "<span style="float: right;">200.</span></div>';
 }
 
 function luxurytax() {
-	addAlert(player[turn].name + " paid $100 for landing on Luxury Tax.");
+	addAlert(player[turn].name + " pagó $100 en bebidas energéticas.");
 	player[turn].pay(100, 0);
 
-	$("#landed").show().text("You landed on Luxury Tax. Pay $100.");
+	$("#landed").show().text("Te gastas $100 en bebidas energéticas para tus jugadores.");
 }
 
 function citytax() {
-	addAlert(player[turn].name + " paid $200 for landing on City Tax.");
+	addAlert(player[turn].name + " pagó $200 en comidas.");
 	player[turn].pay(200, 0);
 
-	$("#landed").show().text("You landed on City Tax. Pay $200.");
+	$("#landed").show().text("Te gastas $200 en comidas para tus jugadores.");
 }
 
 var square = [];
