@@ -13,8 +13,16 @@ td {
 
 #setup {
 	display: none;
-	margin: 100px;
+	margin: -50px 100px;
 	text-align: center;
+
+	#header {
+		margin-bottom: 50px;
+
+		img {
+			height: 500px;
+		}
+	}
 }
 
 #moneybar {
@@ -86,6 +94,11 @@ td {
 	top: 73px;
 	left: -73px;
 	z-index: 2;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 4px;
 }
 
 
@@ -630,7 +643,7 @@ td {
 	width: 150px;
 	height: 200px;
 	display: none;
-	background-color: #bbe1ba;
+	background-color: white;
 	border-radius: 5px;
 	border: 3px solid rgb(51, 51, 51);
 	text-align: center;
@@ -652,13 +665,13 @@ td {
 .enlarge-name {
 	font-weight: bold;
 	font-size: 20px;
-	background-color: white;
+	background-color: #f1fff4;
 	height: 25px;
   	padding-top: 10px;
 }
 
 .enlarge-price {
-	background-color: white;
+	background-color: #f1fff4;
 	vertical-align: bottom;
 	height: 20px;
 }
@@ -1015,6 +1028,14 @@ td {
 	.enlarge-color {
 		display: none;
 	}
+
+	.enlarge-name {
+		height: 40px;
+	}
+
+	.enlarge-price {
+		height: 30px;
+	}
 }
 
 #cell5 {
@@ -1022,6 +1043,18 @@ td {
 }
 #enlarge5 {
 	background-image: url("images/cards/card5.jpg");
+	
+	.enlarge-color {
+		display: none;
+	}
+
+	.enlarge-name {
+		height: 50px;
+	}
+
+	.enlarge-price {
+		height: 20px;
+	}
 }
 
 #cell6 {
@@ -1083,6 +1116,14 @@ td {
 	.enlarge-color {
 		display: none;
 	}
+
+	.enlarge-name {
+		height: 40px;
+	}
+
+	.enlarge-price {
+		height: 30px;
+	}
 }
 
 #cell13 {
@@ -1104,6 +1145,18 @@ td {
 }
 #enlarge15 {
 	background-image: url("images/cells/cell15.jpg");
+	
+	.enlarge-color {
+		display: none;
+	}
+
+	.enlarge-name {
+		height: 50px;
+	}
+
+	.enlarge-price {
+		height: 20px;
+	}
 }
 
 #cell16 {
@@ -1195,6 +1248,18 @@ td {
 }
 #enlarge25 {
 	background-image: url("images/cards/card25.jpg");
+	
+	.enlarge-color {
+		display: none;
+	}
+
+	.enlarge-name {
+		height: 50px;
+	}
+
+	.enlarge-price {
+		height: 20px;
+	}
 }
 
 #cell26 {
@@ -1219,6 +1284,14 @@ td {
 
 	.enlarge-color {
 		display: none;
+	}
+
+	.enlarge-name {
+		height: 40px;
+	}
+
+	.enlarge-price {
+		height: 30px;
 	}
 }
 
@@ -1277,6 +1350,18 @@ td {
 }
 #enlarge35 {
 	background-image: url("images/cells/cell35.jpg");
+	
+	.enlarge-color {
+		display: none;
+	}
+
+	.enlarge-name {
+		height: 50px;
+	}
+
+	.enlarge-price {
+		height: 20px;
+	}
 }
 
 #cell36 {
@@ -1314,6 +1399,14 @@ td {
 
 	.enlarge-color {
 		display: none;
+	}
+
+	.enlarge-name {
+		height: 40px;
+	}
+
+	.enlarge-price {
+		height: 30px;
 	}
 }
 

@@ -2849,7 +2849,7 @@ window.onload = function() {
 
 	// Jail corrections
 	$("<div>", {id: "jailpositionholder" }).appendTo("#jail");
-	$("<span>").text("Jail").appendTo("#jail");
+	$("<span>").text("Banquillo").appendTo("#jail");
 
 	document.getElementById("jail").enlargeId = "enlarge40";
 
